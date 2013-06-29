@@ -1,0 +1,13 @@
+<h1>Formulario para buscar modelos</h1>
+
+<%= form_for(@modelo, url: resultados_modelos_path, method: :post) do |f| %>
+  <div class="field">
+    <%= label :buscar, :nombre %><br />
+    <%= text_field :buscar, :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Buscar" %>
+  </div>
+<% end %>
+
+<%= render 'lista' %>
