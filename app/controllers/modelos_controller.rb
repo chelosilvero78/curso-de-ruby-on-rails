@@ -1,4 +1,6 @@
 class ModelosController < ApplicationController
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
   # GET /modelos
   # GET /modelos.json
   def index
