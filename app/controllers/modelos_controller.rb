@@ -95,7 +95,7 @@ class ModelosController < ApplicationController
     @modelos = Modelo.where("nombre LIKE ?", "%" + params[:buscar][:nombre] + "%" )
 
     respond_to do |format|
-      format.html { render :buscar }
+      format.js { render :buscar }
     end
   end
 
