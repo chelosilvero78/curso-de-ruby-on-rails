@@ -31,6 +31,7 @@ class ModelosController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @modelo }
+      format.js
     end
   end
 
@@ -95,7 +96,7 @@ class ModelosController < ApplicationController
     @modelos = Modelo.where("nombre LIKE ?", "%" + params[:buscar][:nombre] + "%" )
 
     respond_to do |format|
-      format.js { render :buscar }
+      format.js
     end
   end
 
